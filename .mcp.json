@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "karma-compass": {
+      "type": "http",
+      "url": "https://nonprofitsapi.karmahq.org/mcp"
+    }
+  }
+}
