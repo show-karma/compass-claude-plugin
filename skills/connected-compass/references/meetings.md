@@ -17,7 +17,11 @@ to draft, create or change the agenda; publication still needs its human step.
    matches, explain what is missing and offer scheduling. When scheduling is
    requested, use the returned contract and name who will be invited. An empty
    invitee list means nobody is invited, even when the board has members.
-2. Read the meeting workspace, current agenda and version, readiness, meeting
+2. Read the saved working draft (`board.agenda.canvas.get`) and the latest
+   prepared version separately. A missing prepared version does not mean the
+   working draft is empty. Use the working draft for current preparation;
+   distinguish its unsent edits from the prepared or published record. Read
+   the meeting workspace, readiness, meeting
    objectives, prior agendas and minutes, open actions, submissions and paper
    attachments. For prior minutes, list them with `board.minutes.review.list`,
    then read each one's text with `board.minutes.review.get` (see
