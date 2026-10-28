@@ -1,6 +1,6 @@
 ---
-name: connected-compass
-description: Use for organization-specific nonprofit board work in Karma Compass, including preparing the next meeting from agendas and prior minutes, finding recorded decisions, following up open actions, or working with board documents, votes, people, settings and playbooks. Applies when a member asks about their board's records without naming Compass. General governance explanations do not require private records.
+name: karma-compass
+description: Use for organization-specific nonprofit board work in Karma Compass, including preparing the next meeting from agendas and prior minutes, finding recorded decisions, following up open actions, or working with board documents, votes, people, settings and playbooks. Applies when a member asks about their board's records without naming Compass. Also handles connecting or reconnecting Compass while preserving the pending board request. General governance explanations do not require private records.
 ---
 
 # Use Karma Compass
@@ -15,15 +15,39 @@ which organization's records the person wants before connecting or reading.
 For money transfers, travel purchases or filing official tax returns, explain
 that Compass cannot perform the requested transaction without invoking tools.
 
-## Connect and select the board
+## Connect and continue the request
 
-Before board work, confirm access with `list_boards`. If tools are unavailable
-or authorization has expired, use the plugin's **connect-compass** setup skill
-before continuing. Keep the original request pending through authorization;
-do not send the person to general Settings or ask them to configure MCP.
-The person signs in to Compass and grants access there. Keep credentials out of
-messages and files. If Compass asks them to finish organization setup, give the
-returned instruction and wait.
+Keep the person's original goal, named board and requested output pending
+through authentication. Connection is a step in this workflow; the person
+does not need to invoke another skill or repeat their request.
+
+1. Select the intended Compass connection from the person's request or prior
+   explicit choice. If its tools are available, call `list_boards` once to
+   check authenticated access without changing records. Reuse that result
+   for board selection rather than repeating the access check.
+2. If tools are unavailable or require authorization, use the host's native
+   connect or reconnect action. The person signs in to Compass and approves
+   the displayed access there. Keep credentials in that flow; never ask for
+   a token, password, endpoint or manual MCP configuration in chat.
+3. When no native action is offered, read
+   [Connection entry](references/connection-entry.md) and give the matching
+   host's verified connection entry with one instruction. Keep the pending
+   request; the connection link alone is not successful authorization.
+4. After the person returns from authorization, call `list_boards` once.
+   Connection is complete only when an authenticated tool succeeds. Continue
+   the original task with the returned access and give its requested result;
+   a standalone connected message does not complete a pending board request.
+5. If authorization fails or is cancelled, explain that the original task is
+   still pending and offer the same connection entry to retry. If Compass
+   requires organization setup, relay that instruction and wait. An empty
+   board list means connected with no available membership; a denied board
+   action requires its stated permission recovery, not another login.
+
+When setup is invoked without a pending task, confirm the readable board names
+and roles after the access check and ask what the person wants to do next.
+Reply in their language without record identifiers or raw role values.
+
+## Select the board
 
 Select the connection from the person's request or their explicit choice in
 this conversation. If several connected accounts could satisfy a write, ask
@@ -31,7 +55,7 @@ which account to use and wait. A default connection is not their choice.
 Changing organizations uses the host's connection flow, not a model-supplied
 organization identifier.
 
-Call `list_boards` on that connection and use only its returned scope values.
+Use the boards and scope values returned by the access check on that connection.
 Use a board or committee the person explicitly named in this request or already
 selected in this conversation. If exactly one body is accessible, use it.
 Otherwise ask which body and wait before preparing a write or calling its tool.
