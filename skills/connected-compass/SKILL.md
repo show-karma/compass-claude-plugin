@@ -25,10 +25,19 @@ The person signs in to Compass and grants access there. Keep credentials out of
 messages and files. If Compass asks them to finish organization setup, give the
 returned instruction and wait.
 
-Call `list_boards` to select the board or committee. Use returned scope values
-only. If the request identifies one seat unambiguously, proceed; otherwise
-ask which board they mean. Changing organizations requires the host's
-connection flow, not a model-supplied organization identifier.
+Select the connection from the person's request or their explicit choice in
+this conversation. If several connected accounts could satisfy a write, ask
+which account to use and wait. A default connection is not their choice.
+Changing organizations uses the host's connection flow, not a model-supplied
+organization identifier.
+
+Call `list_boards` on that connection and use only its returned scope values.
+Use a board or committee the person explicitly named in this request or already
+selected in this conversation. If exactly one body is accessible, use it.
+Otherwise ask which body and wait before preparing a write or calling its tool.
+An action title such as “Prepare the demo board pack” identifies the work, not
+its destination. Offer the possible bodies by their returned names and wait
+for the choice; proceed directly once the person chooses.
 
 ## Discover and execute
 

@@ -39,6 +39,12 @@ version was sent. A queued or ambiguous delivery is not confirmed delivery.
 
 ## Follow up on action items
 
+After selecting the connection and board, read the full action list before
+creating an action. If the requested title already exists, show the matching
+actions and ask whether the person means an existing action or a separate new
+one. An explicit request for a separate new action may proceed. Preserve the
+existing actions and use one invocation key for the intended creation.
+
 Find an action by its title in the full action list, not just a capped dashboard.
 Apply a requested date window to the source meeting date, or creation date for
 an item without a meeting. List prepared or older lines that have not started
