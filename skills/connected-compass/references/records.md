@@ -10,8 +10,9 @@ Search citations before answering a factual question about bylaws, policies,
 packets or what a meeting discussed. Inspect the passages and their source
 versions. When the catalog supports recording citations, use its contract for
 the exact returned text; cite readable document titles, pages and links.
-Label draft minutes as awaiting adoption. Use action records to distinguish
-proposed work in minutes from live commitments. An empty search or a metadata
+Label draft minutes as awaiting adoption. A meeting manager's save of the
+reviewed draft starts its extracted action items before adoption; use action
+records to check their status. An empty search or a metadata
 summary does not prove that minutes or a document do not exist. If semantic
 search is unavailable, explain that only text search was available.
 
@@ -40,7 +41,7 @@ version was sent. A queued or ambiguous delivery is not confirmed delivery.
 
 Find an action by its title in the full action list, not just a capped dashboard.
 Apply a requested date window to the source meeting date, or creation date for
-an item without a meeting. List proposed actions awaiting minutes adoption
+an item without a meeting. List prepared or older lines that have not started
 separately from open or overdue actions.
 
 For reminders, read Mission Control and recent contact status. Explain any
