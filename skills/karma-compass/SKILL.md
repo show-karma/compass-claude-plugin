@@ -1,6 +1,6 @@
 ---
 name: karma-compass
-description: Use for organization-specific nonprofit board work in Karma Compass, including preparing the next meeting from agendas and prior minutes, finding recorded decisions, following up open actions, or working with board documents, votes, people, settings and playbooks. Applies when a member asks about their board's records without naming Compass. Also handles connecting or reconnecting Compass while preserving the pending board request. General governance explanations do not require private records.
+description: Use for organization-specific nonprofit board work in Karma Compass, including preparing the next meeting from agendas and prior minutes, finding recorded decisions, following up open actions, or working with board documents, votes, people, settings and playbooks.
 ---
 
 # Use Karma Compass
