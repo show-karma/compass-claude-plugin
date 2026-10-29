@@ -1,7 +1,7 @@
 {
   "name": "karma-compass",
   "displayName": "Karma Compass",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Prepare nonprofit board meetings and work with authorized board records, decisions and actions in Karma Compass.",
   "author": {
     "name": "Karma",
