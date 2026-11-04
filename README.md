@@ -17,8 +17,3 @@ Website: https://compass.karmahq.org
 Support: https://compass.karmahq.org/support
 Privacy: https://compass.karmahq.org/privacy
 Terms: https://compass.karmahq.org/terms
-
-This is a preparation candidate. Official directory release requires a
-publisher-approved license, a public repository folder, completed native
-plugin tests and the connector's own review. No license has been invented
-or granted by this package. Do not submit this candidate as final.
