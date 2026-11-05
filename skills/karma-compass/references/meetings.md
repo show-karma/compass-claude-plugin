@@ -13,6 +13,12 @@ This request alone does not authorize saving an agenda, generating a packet or
 contacting anyone. Continue to the draft/save steps only when the person asks
 to draft, create or change the agenda; publication still needs its human step.
 
+For a request to add specified agenda items, apply those edits to the working
+canvas. Preserve the requested order and durations; keep explicit clock times
+in public notes because canvas blocks have no start/end timestamp fields. Do
+not fill unallocated time with unrequested business or prepare a separate
+agenda version as a substitute for saving the editable outline.
+
 1. Find upcoming meetings. Select the meeting the person named; if no meeting
    matches, explain what is missing and offer scheduling. When scheduling is
    requested, use the returned contract and name who will be invited. An empty
@@ -36,13 +42,17 @@ to draft, create or change the agenda; publication still needs its human step.
    paper only when a source names one. Missing records are a reason to explain
    the gap, not to add generic business to fill the time.
 4. When agenda drafting or editing was requested, compare the proposal with the current agenda. If no material change is
-   needed, keep it and report what you checked. Otherwise save one complete,
-   reversible draft through the discovered agenda operation, using the current
-   version as its base where required. Resolve a version conflict by reading
-   again and rebuilding the proposal, not by overwriting another person's work.
+   needed, keep it and report what you checked. Otherwise save one complete
+   working draft through `board.agenda.canvas.save`, using the revision returned
+   by `board.agenda.canvas.get`. Include every existing block being retained:
+   the save replaces the whole working outline. A prepared agenda version is
+   not evidence that the editable draft changed. Resolve a version conflict by
+   reading again and rebuilding the proposal, not by overwriting another person's work.
 5. Recheck material sources under the shared freshness rules and read back the
-   saved agenda. If a source is inaccessible or changed, state which conclusion
-   is uncertain. A successful save proves a saved draft, not publication.
+   saved working draft with `board.agenda.canvas.get`. Verify the requested
+   additions are present before saying they were saved. If a source is
+   inaccessible or changed, state which conclusion is uncertain. A successful
+   save proves a saved draft, not publication.
 6. When the person requests publication, inspect readiness and packet status.
    Sending the agenda is one step a person takes in Compass: point them to the
    meeting and say who may send it (the chair, executive director, secretary,
