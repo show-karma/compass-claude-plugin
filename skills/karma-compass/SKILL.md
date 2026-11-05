@@ -1,6 +1,6 @@
 ---
 name: karma-compass
-description: Use for organization-specific nonprofit board work in Karma Compass, including preparing the next meeting from agendas and prior minutes, finding recorded decisions, following up open actions, or working with board documents, votes, people, settings and playbooks.
+description: Use Karma Compass to schedule board meetings, draft agendas, track outstanding work, assign action items, auto follow-up and draft votes for your nonprofit’s board.
 ---
 
 # Use Karma Compass
