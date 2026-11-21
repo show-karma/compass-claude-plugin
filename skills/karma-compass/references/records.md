@@ -56,11 +56,12 @@ earlier message is sent, queued or has an uncertain outcome. Prepare a follow-up
 when permitted. Show the draft and recipients before sending, and report the
 API's receipt rather than assuming an email arrived.
 
-## Decisions, votes, people and playbooks
+## Votes, people and playbooks
 
-Find the current record before changing it. A discussion is not a vote, a draft
-motion is not open voting and a closed ballot is not certification. Ask for
-voting rules the person attests from their bylaws; do not supply guessed rules.
+Find the current record before changing it. A draft motion is not open voting
+and a closed ballot is not certification. A motion needs
+a simple majority and a vote is final unless the person asks for a different
+share to pass or for votes to be changeable; do not choose those for them.
 Use the operation's confirmation rules for votes, deletions, legal holds and
 organization email settings. Hand membership invitations and withdrawals to
 the person using the returned Compass link.
